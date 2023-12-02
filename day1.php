@@ -7,9 +7,9 @@ echo 'Part 2: ' . part2();
 /**
  * Extract all numeric digits from string. Get 1st and last digit, combine into 1 number and append to total.
  *
- * @return integer
+ * @return int|string
  */
-function part1()
+function part1(): int|string
 {
     $file = fopen(dirname(__FILE__) . '\data\day1-input.txt', 'r');
     $result = 0;
@@ -25,9 +25,9 @@ function part1()
  * Extract all numeric digits from string and all english language number strings.
  * Get 1st and last digit, combine into 1 number and append to total.
  *
- * @return integer
+ * @return int
  */
-function part2()
+function part2(): int|string
 {
     $number_map = [
         'one' => 1,
