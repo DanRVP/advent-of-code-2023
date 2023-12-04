@@ -1,17 +1,13 @@
 <?php
 
-echo 'Part 1: ' . part1();
-echo "\n";
-echo 'Part 2: ' . part2();
-
 /**
  * Extract all numeric digits from string. Get 1st and last digit, combine into 1 number and append to total.
  *
  * @return int|string
  */
-function part1(): int|string
+function day_1_part_1(): int|string
 {
-    $file = fopen(dirname(__FILE__) . '\data\day1-input.txt', 'r');
+    $file = fopen(DATA . '\day1-input.txt', 'r');
     $result = 0;
     while(!feof($file)) {
         $result += getNum(filter_var(fgets($file), FILTER_SANITIZE_NUMBER_INT));
@@ -27,7 +23,7 @@ function part1(): int|string
  *
  * @return int
  */
-function part2(): int|string
+function day_1_part_2(): int|string
 {
     $number_map = [
         'one' => 1,
@@ -41,7 +37,7 @@ function part2(): int|string
         'nine' => 9,
     ];
 
-    $file = fopen(dirname(__FILE__) . '\data\day1-input.txt', 'r');
+    $file = fopen(DATA . '\day1-input.txt', 'r');
     $result = 0;
     while(!feof($file)) {
         $line = fgets($file);

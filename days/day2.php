@@ -1,17 +1,13 @@
 <?php
 
-echo 'Part 1: ' . part1();
-echo "\n";
-echo 'Part 2: ' . part2();
-
 /**
  * Get the sum of the IDs of all possible games.
  *
  * @return int
  */
-function part1(): int
+function day_2_part_1(): int
 {
-    $file = fopen(dirname(__FILE__) . '\data\day2-input.txt', 'r');
+    $file = fopen(DATA . '\day2-input.txt', 'r');
     $result = 0;
     while(!feof($file)) {
         $res = isGamePossible(trim(fgets($file)));
@@ -28,9 +24,9 @@ function part1(): int
  *
  * @return int
  */
-function part2(): int
+function day_2_part_2(): int
 {
-    $file = fopen(dirname(__FILE__) . '\data\day2-input.txt', 'r');
+    $file = fopen(DATA . '\day2-input.txt', 'r');
     $result = 0;
     while(!feof($file)) {
         $result += getGamePowers(trim(fgets($file)));
